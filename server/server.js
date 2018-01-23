@@ -7,8 +7,8 @@ var {User} = require('./models/user');
 
 var app = express();
 
+// create middleware
 app.use(bodyParser.json());
-
 
 // start configure post (create new todos) routes
 // create a resource ('/todos')
@@ -31,3 +31,5 @@ app.post('/todos', (req, res) => {
 app.listen(3000, () => {
     console.log('Started on port 3000');
 });
+
+module.exports = {app};
